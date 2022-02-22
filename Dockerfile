@@ -32,5 +32,8 @@ VOLUME /homebridge
 
 COPY root /
 
+#added original commands
+RUN apt update && apt -y upgrade && npm install npm && npm install homebridge-nature-remo-sensor homebridge-nature-remo-cloud-aircon homebridge-cmd homebridge-wol homebridge-people-pro
+
 ARG AVAHI
 ENV ENABLE_AVAHI="${AVAHI:-0}"
